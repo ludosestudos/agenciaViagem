@@ -1,0 +1,10 @@
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\rwdrecentlinks.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\rwdrecentlinks.pdb
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\rwdrecentlinks\obj\Release\net6.0\rwdrecentlinks.csproj.AssemblyReference.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\rwdrecentlinks\obj\Release\net6.0\rwdrecentlinks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\rwdrecentlinks\obj\Release\net6.0\rwdrecentlinks.csproj.CoreCompileInputs.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\rwdrecentlinks\obj\Release\net6.0\rwdrecentlinks.csproj.CopyComplete
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\rwdrecentlinks\obj\Release\net6.0\rwdrecentlinks.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\rwdrecentlinks\obj\Release\net6.0\refint\rwdrecentlinks.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\rwdrecentlinks\obj\Release\net6.0\rwdrecentlinks.pdb
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\rwdrecentlinks\obj\Release\net6.0\ref\rwdrecentlinks.dll

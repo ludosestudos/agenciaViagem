@@ -1,0 +1,12 @@
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\GxDeps.deps.json
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\GxDeps.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\GxDeps.pdb
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\GxDeps.csproj.AssemblyReference.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\GxDeps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\GxDeps.AssemblyInfoInputs.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\GxDeps.AssemblyInfo.cs
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\GxDeps.csproj.CoreCompileInputs.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\GxDeps.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\refint\GxDeps.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\GxDeps.pdb
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\GxDeps\obj\net6.0\ref\GxDeps.dll

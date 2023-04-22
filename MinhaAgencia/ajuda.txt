@@ -1,2 +1,3 @@
 3. Criação da Base de conhecimento
 4. Desenhando a primeira transação
+5. Executando a aplicação pela primeira vez

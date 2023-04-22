@@ -1,0 +1,2 @@
+CREATE TABLE [Cliente] ([ClienteId] smallint NOT NULL , [ClienteNome] nchar(20) NOT NULL , [ClienteSobreNome] nchar(30) NOT NULL , [ClienteEndereco] nvarchar(1024) NOT NULL , [ClienteTelefone] nchar(20) NOT NULL , [ClienteEmail] nvarchar(100) NOT NULL , PRIMARY KEY([ClienteId]))
+

@@ -1,0 +1,10 @@
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\Reorganization.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\Reorganization.pdb
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\reorganization\obj\Release\net6.0\reorganization.csproj.AssemblyReference.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\reorganization\obj\Release\net6.0\reorganization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\reorganization\obj\Release\net6.0\reorganization.csproj.CoreCompileInputs.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\reorganization\obj\Release\net6.0\reorganization.csproj.CopyComplete
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\reorganization\obj\Release\net6.0\Reorganization.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\reorganization\obj\Release\net6.0\refint\Reorganization.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\reorganization\obj\Release\net6.0\Reorganization.pdb
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\reorganization\obj\Release\net6.0\ref\Reorganization.dll
