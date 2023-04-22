@@ -1,0 +1,10 @@
+﻿<ConnectionInformation>
+	<DBName>GX_KB_MinhaAgencia</DBName>
+	<IntegratedSecurity>True</IntegratedSecurity>
+	<ServerInstance>genexus\SQLEXPRESS</ServerInstance>
+	<CreateDbInKbFolder>True</CreateDbInKbFolder>
+	<Directory>C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia</Directory>
+	<DataFile>GX_KB_MinhaAgencia.mdf</DataFile>
+	<LogFile>GX_KB_MinhaAgencia_log.ldf</LogFile>
+	<HostName>genexus</HostName>
+</ConnectionInformation>
