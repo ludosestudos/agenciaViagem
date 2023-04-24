@@ -20,8 +20,12 @@
 		<ProjectReference Include=".\..\rwdpromptmasterpage\rwdpromptmasterpage.csproj" />
 		<ProjectReference Include=".\..\gx0010\gx0010.csproj" />
 		<ProjectReference Include=".\..\gx0020\gx0020.csproj" />
+		<ProjectReference Include=".\..\gx0030\gx0030.csproj" />
+		<ProjectReference Include=".\..\gx0040\gx0040.csproj" />
 		<ProjectReference Include=".\..\cliente\cliente.csproj" />
 		<ProjectReference Include=".\..\atracao\atracao.csproj" />
+		<ProjectReference Include=".\..\pais\pais.csproj" />
+		<ProjectReference Include=".\..\categoria\categoria.csproj" />
 		<ProjectReference Include=".\..\GeneXus.Programs.Common\GeneXus.Programs.Common.csproj" />
 
 	</ItemGroup>

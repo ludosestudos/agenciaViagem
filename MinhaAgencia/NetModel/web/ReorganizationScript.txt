@@ -1,10 +1,11 @@
-CREATE TABLE [GXA0001] ([ClienteId] smallint NOT NULL IDENTITY(1,1), [ClienteNome] nchar(20) NOT NULL , [ClienteSobreNome] nchar(30) NOT NULL , [ClienteEndereco] nvarchar(1024) NOT NULL , [ClienteTelefone] nchar(20) NOT NULL , [ClienteEmail] nvarchar(100) NOT NULL )
-SET IDENTITY_INSERT [GXA0001] ON
-INSERT INTO [GXA0001] ([ClienteId], [ClienteNome], [ClienteSobreNome], [ClienteEndereco], [ClienteTelefone], [ClienteEmail]) SELECT [ClienteId], [ClienteNome], [ClienteSobreNome], [ClienteEndereco], [ClienteTelefone], [ClienteEmail] FROM [Cliente] T1
-SET IDENTITY_INSERT [GXA0001] OFF
-DROP TABLE [Cliente]
-sp_rename '[GXA0001]', 'Cliente'
-ALTER TABLE [Cliente] ADD PRIMARY KEY([ClienteId])
+CREATE TABLE [GXA0002] ([AtracaoId] smallint NOT NULL IDENTITY(1,1), [AtracaoNome] nchar(20) NOT NULL , [PaisId] smallint NOT NULL , [CategoriaId] smallint NULL , [AtracaoFoto] VARBINARY(MAX) NOT NULL , [AtracaoFoto_GXI] varchar(2048) NOT NULL )
+Run conversion program for table Atracao
+DROP TABLE [Atracao]
+sp_rename '[GXA0002]', 'Atracao'
+ALTER TABLE [Atracao] ADD PRIMARY KEY([AtracaoId])
+CREATE NONCLUSTERED INDEX [IATRACAO1] ON [Atracao] ([PaisId] )
+CREATE NONCLUSTERED INDEX [IATRACAO2] ON [Atracao] ([CategoriaId] )
 
-CREATE TABLE [Atracao] ([AtracaoId] smallint NOT NULL IDENTITY(1,1), [AtracaoNome] nchar(20) NOT NULL , PRIMARY KEY([AtracaoId]))
+ALTER TABLE [Atracao] ADD CONSTRAINT [IATRACAO1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId])
+ALTER TABLE [Atracao] ADD CONSTRAINT [IATRACAO2] FOREIGN KEY ([CategoriaId]) REFERENCES [Categoria] ([CategoriaId])
 

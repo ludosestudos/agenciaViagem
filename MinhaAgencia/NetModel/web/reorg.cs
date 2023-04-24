@@ -56,13 +56,13 @@ namespace GeneXus.Programs {
          /* Load data into tables. */
       }
 
-      public void ReorganizeCliente( )
+      public void ReorganizeAtracao( )
       {
          string cmdBuffer = "";
-         /* Indices for table Cliente */
+         /* Indices for table Atracao */
          try
          {
-            cmdBuffer=" CREATE TABLE [GXA0001] ([ClienteId] smallint NOT NULL IDENTITY(1,1), [ClienteNome] nchar(20) NOT NULL , [ClienteSobreNome] nchar(30) NOT NULL , [ClienteEndereco] nvarchar(1024) NOT NULL , [ClienteTelefone] nchar(20) NOT NULL , [ClienteEmail] nvarchar(100) NOT NULL )  "
+            cmdBuffer=" CREATE TABLE [GXA0002] ([AtracaoId] smallint NOT NULL IDENTITY(1,1), [AtracaoNome] nchar(20) NOT NULL , [PaisId] smallint NOT NULL , [CategoriaId] smallint NULL , [AtracaoFoto] VARBINARY(MAX) NOT NULL , [AtracaoFoto_GXI] varchar(2048) NOT NULL )  "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -73,8 +73,8 @@ namespace GeneXus.Programs {
          {
             try
             {
-               DropTableConstraints( "[GXA0001]") ;
-               cmdBuffer=" DROP TABLE [GXA0001] "
+               DropTableConstraints( "[GXA0002]") ;
+               cmdBuffer=" DROP TABLE [GXA0002] "
                ;
                RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -85,8 +85,8 @@ namespace GeneXus.Programs {
             {
                try
                {
-                  DropTableConstraints( "[GXA0001]") ;
-                  cmdBuffer=" DROP VIEW [GXA0001] "
+                  DropTableConstraints( "[GXA0002]") ;
+                  cmdBuffer=" DROP VIEW [GXA0002] "
                   ;
                   RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                   RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -97,8 +97,8 @@ namespace GeneXus.Programs {
                {
                   try
                   {
-                     DropTableConstraints( "[GXA0001]") ;
-                     cmdBuffer=" DROP FUNCTION [GXA0001] "
+                     DropTableConstraints( "[GXA0002]") ;
+                     cmdBuffer=" DROP FUNCTION [GXA0002] "
                      ;
                      RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                      RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
@@ -110,35 +110,18 @@ namespace GeneXus.Programs {
                   }
                }
             }
-            cmdBuffer=" CREATE TABLE [GXA0001] ([ClienteId] smallint NOT NULL IDENTITY(1,1), [ClienteNome] nchar(20) NOT NULL , [ClienteSobreNome] nchar(30) NOT NULL , [ClienteEndereco] nvarchar(1024) NOT NULL , [ClienteTelefone] nchar(20) NOT NULL , [ClienteEmail] nvarchar(100) NOT NULL )  "
+            cmdBuffer=" CREATE TABLE [GXA0002] ([AtracaoId] smallint NOT NULL IDENTITY(1,1), [AtracaoNome] nchar(20) NOT NULL , [PaisId] smallint NOT NULL , [CategoriaId] smallint NULL , [AtracaoFoto] VARBINARY(MAX) NOT NULL , [AtracaoFoto_GXI] varchar(2048) NOT NULL )  "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
             RGZ.ExecuteStmt() ;
             RGZ.Drop();
          }
-         cmdBuffer=" SET IDENTITY_INSERT [GXA0001] ON "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
-         cmdBuffer=" INSERT INTO [GXA0001] ([ClienteId], [ClienteNome], [ClienteSobreNome], [ClienteEndereco], [ClienteTelefone], [ClienteEmail]) SELECT [ClienteId], [ClienteNome], [ClienteSobreNome], [ClienteEndereco], [ClienteTelefone], [ClienteEmail] FROM [Cliente] T1 "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
-         cmdBuffer=" SET IDENTITY_INSERT [GXA0001] OFF "
-         ;
-         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-         RGZ.ExecuteStmt() ;
-         RGZ.Drop();
+         new atracaoconversion(context ).execute( ) ;
          try
          {
-            DropTableConstraints( "[Cliente]") ;
-            cmdBuffer=" DROP TABLE [Cliente] "
+            DropTableConstraints( "[Atracao]") ;
+            cmdBuffer=" DROP TABLE [Atracao] "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -149,8 +132,8 @@ namespace GeneXus.Programs {
          {
             try
             {
-               DropTableConstraints( "[Cliente]") ;
-               cmdBuffer=" DROP VIEW [Cliente] "
+               DropTableConstraints( "[Atracao]") ;
+               cmdBuffer=" DROP VIEW [Atracao] "
                ;
                RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -161,8 +144,8 @@ namespace GeneXus.Programs {
             {
                try
                {
-                  DropTableConstraints( "[Cliente]") ;
-                  cmdBuffer=" DROP FUNCTION [Cliente] "
+                  DropTableConstraints( "[Atracao]") ;
+                  cmdBuffer=" DROP FUNCTION [Atracao] "
                   ;
                   RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                   RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
@@ -176,24 +159,71 @@ namespace GeneXus.Programs {
          }
          RGZ = new GxCommand(dsDefault.Db, "sp_rename", dsDefault,0,true,false,null);
          RGZ.CommandType = CommandType.StoredProcedure;
-         RGZ.AddParameter("@objname","[GXA0001]");
-         RGZ.AddParameter("@newname","Cliente");
+         RGZ.AddParameter("@objname","[GXA0002]");
+         RGZ.AddParameter("@newname","Atracao");
          RGZ.ExecuteStmt();
-         cmdBuffer=" ALTER TABLE [Cliente] ADD PRIMARY KEY([ClienteId]) "
+         cmdBuffer=" ALTER TABLE [Atracao] ADD PRIMARY KEY([AtracaoId]) "
          ;
          RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
          RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
          RGZ.ExecuteStmt() ;
          RGZ.Drop();
-      }
-
-      public void CreateAtracao( )
-      {
-         string cmdBuffer = "";
-         /* Indices for table Atracao */
          try
          {
-            cmdBuffer=" CREATE TABLE [Atracao] ([AtracaoId] smallint NOT NULL IDENTITY(1,1), [AtracaoNome] nchar(20) NOT NULL , PRIMARY KEY([AtracaoId]))  "
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IATRACAO1] ON [Atracao] ([PaisId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [IATRACAO1] ON [Atracao] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IATRACAO1] ON [Atracao] ([PaisId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         try
+         {
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IATRACAO2] ON [Atracao] ([CategoriaId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            cmdBuffer=" DROP INDEX [IATRACAO2] ON [Atracao] "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [IATRACAO2] ON [Atracao] ([CategoriaId] ) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIAtracaoPais( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Atracao] ADD CONSTRAINT [IATRACAO1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId]) "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -204,44 +234,52 @@ namespace GeneXus.Programs {
          {
             try
             {
-               DropTableConstraints( "[Atracao]") ;
-               cmdBuffer=" DROP TABLE [Atracao] "
+               cmdBuffer=" ALTER TABLE [Atracao] DROP CONSTRAINT [IATRACAO1] "
                ;
                RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-               RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
                RGZ.ExecuteStmt() ;
                RGZ.Drop();
             }
             catch
             {
-               try
-               {
-                  DropTableConstraints( "[Atracao]") ;
-                  cmdBuffer=" DROP VIEW [Atracao] "
-                  ;
-                  RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-                  RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
-                  RGZ.ExecuteStmt() ;
-                  RGZ.Drop();
-               }
-               catch
-               {
-                  try
-                  {
-                     DropTableConstraints( "[Atracao]") ;
-                     cmdBuffer=" DROP FUNCTION [Atracao] "
-                     ;
-                     RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
-                     RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
-                     RGZ.ExecuteStmt() ;
-                     RGZ.Drop();
-                  }
-                  catch
-                  {
-                  }
-               }
             }
-            cmdBuffer=" CREATE TABLE [Atracao] ([AtracaoId] smallint NOT NULL IDENTITY(1,1), [AtracaoNome] nchar(20) NOT NULL , PRIMARY KEY([AtracaoId]))  "
+            cmdBuffer=" ALTER TABLE [Atracao] ADD CONSTRAINT [IATRACAO1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RIAtracaoCategoria( )
+      {
+         string cmdBuffer;
+         try
+         {
+            cmdBuffer=" ALTER TABLE [Atracao] ADD CONSTRAINT [IATRACAO2] FOREIGN KEY ([CategoriaId]) REFERENCES [Categoria] ([CategoriaId]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE [Atracao] DROP CONSTRAINT [IATRACAO2] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch
+            {
+            }
+            cmdBuffer=" ALTER TABLE [Atracao] ADD CONSTRAINT [IATRACAO2] FOREIGN KEY ([CategoriaId]) REFERENCES [Categoria] ([CategoriaId]) "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -256,9 +294,9 @@ namespace GeneXus.Programs {
          {
             /* Using cursor P00012 */
             pr_default.execute(0);
-            ClienteCount = P00012_AClienteCount[0];
+            AtracaoCount = P00012_AAtracaoCount[0];
             pr_default.close(0);
-            PrintRecordCount ( "Cliente" ,  ClienteCount );
+            PrintRecordCount ( "Atracao" ,  AtracaoCount );
          }
       }
 
@@ -300,14 +338,9 @@ namespace GeneXus.Programs {
             }
             pr_default.close(2);
          }
-         if ( ! tableexist("Cliente",sSchemaVar) )
+         if ( ! tableexist("Atracao",sSchemaVar) )
          {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_table_not_exist", new   object[]  {"Cliente"}) ) ;
-            return false ;
-         }
-         if ( tableexist("Atracao",sSchemaVar) )
-         {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_table_exist", new   object[]  {"Atracao"}) ) ;
+            SetCheckError ( GXResourceManager.GetMessage("GXM_table_not_exist", new   object[]  {"Atracao"}) ) ;
             return false ;
          }
          return true ;
@@ -358,12 +391,13 @@ namespace GeneXus.Programs {
 
       private void ExecuteOnlyTablesReorganization( )
       {
-         ReorgExecute.RegisterBlockForSubmit( 1 ,  "ReorganizeCliente" , new Object[]{ });
-         ReorgExecute.RegisterBlockForSubmit( 2 ,  "CreateAtracao" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 1 ,  "ReorganizeAtracao" , new Object[]{ });
       }
 
       private void ExecuteOnlyRisReorganization( )
       {
+         ReorgExecute.RegisterBlockForSubmit( 2 ,  "RIAtracaoPais" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 3 ,  "RIAtracaoCategoria" , new Object[]{ });
       }
 
       private void ExecuteTablesReorganization( )
@@ -381,12 +415,15 @@ namespace GeneXus.Programs {
 
       private void SetPrecedencetables( )
       {
-         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_fileupdate", new   object[]  {"Cliente", ""}) );
-         GXReorganization.SetMsg( 2 ,  GXResourceManager.GetMessage("GXM_filecrea", new   object[]  {"Atracao", ""}) );
+         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_fileupdate", new   object[]  {"Atracao", ""}) );
       }
 
       private void SetPrecedenceris( )
       {
+         GXReorganization.SetMsg( 2 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IATRACAO1]"}) );
+         ReorgExecute.RegisterPrecedence( "RIAtracaoPais" ,  "ReorganizeAtracao" );
+         GXReorganization.SetMsg( 3 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[IATRACAO2]"}) );
+         ReorgExecute.RegisterPrecedence( "RIAtracaoCategoria" ,  "ReorganizeAtracao" );
       }
 
       private void ExecuteReorganization( )
@@ -443,7 +480,7 @@ namespace GeneXus.Programs {
       public override void initialize( )
       {
          scmdbuf = "";
-         P00012_AClienteCount = new int[1] ;
+         P00012_AAtracaoCount = new int[1] ;
          sSchemaVar = "";
          nsSchemaVar = false;
          P00023_AsSchemaVar = new string[] {""} ;
@@ -482,7 +519,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.reorg__default(),
             new Object[][] {
                 new Object[] {
-               P00012_AClienteCount
+               P00012_AAtracaoCount
                }
                , new Object[] {
                P00023_AsSchemaVar
@@ -505,7 +542,7 @@ namespace GeneXus.Programs {
       }
 
       protected short ErrCode ;
-      protected int ClienteCount ;
+      protected int AtracaoCount ;
       protected int rkeyid ;
       protected string scmdbuf ;
       protected string sSchemaVar ;
@@ -527,7 +564,7 @@ namespace GeneXus.Programs {
       protected IGxDataStore dsDefault ;
       protected GxCommand RGZ ;
       protected IDataStoreProvider pr_default ;
-      protected int[] P00012_AClienteCount ;
+      protected int[] P00012_AAtracaoCount ;
       protected string[] P00023_AsSchemaVar ;
       protected bool[] P00023_nsSchemaVar ;
       protected string[] P00034_AsSchemaVar ;
@@ -595,7 +632,7 @@ namespace GeneXus.Programs {
           new ParDef("@sTableName",GXType.Char,255,0)
           };
           def= new CursorDef[] {
-              new CursorDef("P00012", "SELECT COUNT(*) FROM [Cliente] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00012,100, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("P00012", "SELECT COUNT(*) FROM [Atracao] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00012,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("P00023", "SELECT SCHEMA_NAME() ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00023,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("P00034", "SELECT USER_NAME() ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00034,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("P00045", "SELECT TABLE_NAME, TABLE_SCHEMA FROM INFORMATION_SCHEMA.TABLES WHERE (TABLE_NAME = @sTableName) AND (TABLE_SCHEMA = @sMySchemaName) ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00045,100, GxCacheFrequency.OFF ,true,false )

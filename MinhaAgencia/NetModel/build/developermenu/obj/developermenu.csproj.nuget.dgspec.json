@@ -306,6 +306,108 @@
         }
       }
     },
+    "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\categoria\\categoria.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\categoria\\categoria.csproj",
+        "projectName": "categoria",
+        "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\categoria\\categoria.csproj",
+        "packagesPath": "C:\\Users\\genexus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\categoria\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\genexus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\GeneXus.Programs.Common\\GeneXus.Programs.Common.csproj": {
+                "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\GeneXus.Programs.Common\\GeneXus.Programs.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1701"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[1.0.19269.1, )"
+            },
+            "Microsoft.Extensions.DependencyModel": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NetTopologySuite": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "NetTopologySuite.Core": {
+              "target": "Package",
+              "version": "[1.15.3, )"
+            },
+            "Novell.Directory.Ldap.NETStandard": {
+              "target": "Package",
+              "version": "[3.3.1, )"
+            },
+            "Sandwych.GeographicLib": {
+              "target": "Package",
+              "version": "[1.49.3, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "iTextSharp-LGPL": {
+              "target": "Package",
+              "version": "[4.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\cliente\\cliente.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -439,6 +541,9 @@
               "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\atracao\\atracao.csproj": {
                 "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\atracao\\atracao.csproj"
               },
+              "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\categoria\\categoria.csproj": {
+                "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\categoria\\categoria.csproj"
+              },
               "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\cliente\\cliente.csproj": {
                 "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\cliente\\cliente.csproj"
               },
@@ -447,6 +552,15 @@
               },
               "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0020\\gx0020.csproj": {
                 "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0020\\gx0020.csproj"
+              },
+              "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0030\\gx0030.csproj": {
+                "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0030\\gx0030.csproj"
+              },
+              "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0040\\gx0040.csproj": {
+                "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0040\\gx0040.csproj"
+              },
+              "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\pais\\pais.csproj": {
+                "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\pais\\pais.csproj"
               },
               "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\promptmasterpage\\promptmasterpage.csproj": {
                 "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\promptmasterpage\\promptmasterpage.csproj"
@@ -650,6 +764,312 @@
         "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0020\\gx0020.csproj",
         "packagesPath": "C:\\Users\\genexus\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0020\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\genexus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\GeneXus.Programs.Common\\GeneXus.Programs.Common.csproj": {
+                "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\GeneXus.Programs.Common\\GeneXus.Programs.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1701"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[1.0.19269.1, )"
+            },
+            "Microsoft.Extensions.DependencyModel": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NetTopologySuite": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "NetTopologySuite.Core": {
+              "target": "Package",
+              "version": "[1.15.3, )"
+            },
+            "Novell.Directory.Ldap.NETStandard": {
+              "target": "Package",
+              "version": "[3.3.1, )"
+            },
+            "Sandwych.GeographicLib": {
+              "target": "Package",
+              "version": "[1.49.3, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "iTextSharp-LGPL": {
+              "target": "Package",
+              "version": "[4.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0030\\gx0030.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0030\\gx0030.csproj",
+        "projectName": "gx0030",
+        "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0030\\gx0030.csproj",
+        "packagesPath": "C:\\Users\\genexus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0030\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\genexus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\GeneXus.Programs.Common\\GeneXus.Programs.Common.csproj": {
+                "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\GeneXus.Programs.Common\\GeneXus.Programs.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1701"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[1.0.19269.1, )"
+            },
+            "Microsoft.Extensions.DependencyModel": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NetTopologySuite": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "NetTopologySuite.Core": {
+              "target": "Package",
+              "version": "[1.15.3, )"
+            },
+            "Novell.Directory.Ldap.NETStandard": {
+              "target": "Package",
+              "version": "[3.3.1, )"
+            },
+            "Sandwych.GeographicLib": {
+              "target": "Package",
+              "version": "[1.49.3, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "iTextSharp-LGPL": {
+              "target": "Package",
+              "version": "[4.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0040\\gx0040.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0040\\gx0040.csproj",
+        "projectName": "gx0040",
+        "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0040\\gx0040.csproj",
+        "packagesPath": "C:\\Users\\genexus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0040\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\genexus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\GeneXus.Programs.Common\\GeneXus.Programs.Common.csproj": {
+                "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\GeneXus.Programs.Common\\GeneXus.Programs.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1701"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[1.0.19269.1, )"
+            },
+            "Microsoft.Extensions.DependencyModel": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "NetTopologySuite": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "NetTopologySuite.Core": {
+              "target": "Package",
+              "version": "[1.15.3, )"
+            },
+            "Novell.Directory.Ldap.NETStandard": {
+              "target": "Package",
+              "version": "[3.3.1, )"
+            },
+            "Sandwych.GeographicLib": {
+              "target": "Package",
+              "version": "[1.49.3, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "System.DirectoryServices": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "iTextSharp-LGPL": {
+              "target": "Package",
+              "version": "[4.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\pais\\pais.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\pais\\pais.csproj",
+        "projectName": "pais",
+        "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\pais\\pais.csproj",
+        "packagesPath": "C:\\Users\\genexus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\pais\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\genexus\\AppData\\Roaming\\NuGet\\NuGet.Config"

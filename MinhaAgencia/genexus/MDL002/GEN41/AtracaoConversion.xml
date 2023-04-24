@@ -6,16 +6,27 @@
 <TableName>Atracao</TableName>
 <Description>Atracao</Description></Table>
 <ReorgCls>c</ReorgCls>
-<ReorgCode>new</ReorgCode>
-<ReorgMsg>Atracao is new</ReorgMsg>
-<ReorgAction>*</ReorgAction>
+<ReorgCode>pk</ReorgCode>
+<ReorgMsg>Atracao needs conversion</ReorgMsg>
+<ReorgAction>#</ReorgAction>
 <TableAttributes>
 <AttrisInTable>
 <Attribute>
 <AttriId>7</AttriId>
 <AttriName>AtracaoId</AttriName>
 <Description>Atracao Id</Description>
-<TakesValueFrom></TakesValueFrom>
+<TakesValueFrom>
+<Table>
+<TableId>2</TableId>
+<TableName>Atracao</TableName>
+<Description>Atracao</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>AtracaoId</AttriName>
+<Description>Atracao Id</Description></Attribute></FromValue></TakesValueFrom>
 <OnPrimaryKey>Yes</OnPrimaryKey>
 <AttriType>
 <DataType>N</DataType>
@@ -35,7 +46,18 @@
 <AttriId>8</AttriId>
 <AttriName>AtracaoNome</AttriName>
 <Description>Atracao Nome</Description>
-<TakesValueFrom></TakesValueFrom>
+<TakesValueFrom>
+<Table>
+<TableId>2</TableId>
+<TableName>Atracao</TableName>
+<Description>Atracao</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>8</AttriId>
+<AttriName>AtracaoNome</AttriName>
+<Description>Atracao Nome</Description></Attribute></FromValue></TakesValueFrom>
 <AttriType>
 <DataType>C</DataType>
 <Presicion>20</Presicion>
@@ -52,9 +74,151 @@
 <Value>No</Value></Property>
 <Property>
 <Name>NLS</Name>
-<Value>Yes</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description>
+<TakesValueFrom>
+<Table>
+<TableId>2</TableId>
+<TableName>Atracao</TableName>
+<Description>Atracao</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>11</AttriId>
+<AttriName>CategoriaId</AttriName>
+<Description>Categoria Id</Description>
+<TakesValueFrom>
+<Table>
+<TableId>2</TableId>
+<TableName>Atracao</TableName>
+<Description>Atracao</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>11</AttriId>
+<AttriName>CategoriaId</AttriName>
+<Description>Categoria Id</Description></Attribute></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>AtracaoFoto</AttriName>
+<Description>Atracao Foto</Description>
+<TakesValueFrom>
+<Table>
+<TableId>2</TableId>
+<TableName>Atracao</TableName>
+<Description>Atracao</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Token>nullvalue(</Token>
+<Sp></Sp>
+<Variable>
+<VarId>T.AtracaoFoto</VarId>
+<VarName>&amp;AtracaoFoto</VarName></Variable>
+<Token>)</Token></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>B</DataType>
+<Presicion>1024</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType>
+<AttriOldType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriOldType>
+<AttriChangeType>upd</AttriChangeType></Attribute>
+<Attribute>
+<AttriId>40000</AttriId>
+<AttriName>AtracaoFoto_GXI</AttriName>
+<Description>AtracaoFoto_GXI</Description>
+<TakesValueFrom>
+<FromValue>
+<Token></Token></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>V</DataType>
+<Presicion>2048</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType>
+<AttriChangeType>ni</AttriChangeType></Attribute></AttrisInTable>
 <AttrisNoLongerInTable></AttrisNoLongerInTable>
 <AttrisInManyTables></AttrisInManyTables></TableAttributes>
+<NavigationTree>
+<Table>
+<TableId>2</TableId>
+<TableName>Atracao</TableName>
+<Description>Atracao</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>AtracaoId</AttriName>
+<Description>Atracao Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
 <TableIndices>
 <Indices>
 <Index>
@@ -66,10 +230,81 @@
 <AttriName>AtracaoId</AttriName>
 <Description>Atracao Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>Yes</Clustered></Index></Indices></TableIndices>
-<FKConstraints></FKConstraints>
+<Clustered>Yes</Clustered></Index>
+<Index>
+<IndexName>IATRACAO1</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index>
+<Index>
+<IndexName>IATRACAO2</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>11</AttriId>
+<AttriName>CategoriaId</AttriName>
+<Description>Categoria Id</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index></Indices></TableIndices>
+<FKConstraints>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>4</TableId>
+<TableName>Categoria</TableName>
+<Description>Categoria</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>11</AttriId>
+<AttriName>CategoriaId</AttriName>
+<Description>Categoria Id</Description></Attribute></Attributes></FKConstraint>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>3</TableId>
+<TableName>Pais</TableName>
+<Description>Pais</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Atracao] ([AtracaoId] smallint NOT NULL IDENTITY(1,1), [AtracaoNome] nchar(20) NOT NULL , PRIMARY KEY([AtracaoId])) </Statement></Statements>
-<NeedReorganizationProgram>False</NeedReorganizationProgram>
+<Statement>CREATE TABLE [GXA0002] ([AtracaoId] smallint NOT NULL IDENTITY(1,1), [AtracaoNome] nchar(20) NOT NULL , [PaisId] smallint NOT NULL , [CategoriaId] smallint NULL , [AtracaoFoto] VARBINARY(MAX) NOT NULL , [AtracaoFoto_GXI] varchar(2048) NOT NULL ) </Statement>
+<Statement>Run conversion program for table Atracao</Statement>
+<Statement>DROP TABLE [Atracao]</Statement>
+<Statement>CALL sp_rename('[GXA0002]', 'Atracao')</Statement>
+<Statement>ALTER TABLE [Atracao] ADD PRIMARY KEY([AtracaoId])</Statement>
+<Statement>CREATE NONCLUSTERED INDEX [IATRACAO1] ON [Atracao] ([PaisId] )</Statement>
+<Statement>CREATE NONCLUSTERED INDEX [IATRACAO2] ON [Atracao] ([CategoriaId] )</Statement>
+<Statement>ALTER TABLE [Atracao] ADD CONSTRAINT [IATRACAO1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId])</Statement>
+<Statement>ALTER TABLE [Atracao] ADD CONSTRAINT [IATRACAO2] FOREIGN KEY ([CategoriaId]) REFERENCES [Categoria] ([CategoriaId])</Statement></Statements>
+<NeedReorganizationProgram>True</NeedReorganizationProgram>
 <Warnings></Warnings>
-<Errors></Errors></ReorgSpec>
+<Errors></Errors>
+<Information>
+<InfoMsg>
+<MsgCode>nfo0003</MsgCode>
+<Message>
+<Token>The reorganization for this table makes the schema not backward compatible.</Token></Message>
+<AdditionalInfo>
+<Title>The following operations are not backward compatible:</Title>
+<Info>
+<Token>Change type for</Token>
+<Token>attribute</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>AtracaoFoto</AttriName>
+<Description>Atracao Foto</Description></Attribute></Info>
+<Info>
+<Token>Add not null</Token>
+<Token>attribute</Token>
+<Attribute>
+<AttriId>40000</AttriId>
+<AttriName>AtracaoFoto.Uri  </AttriName>
+<Description></Description></Attribute></Info></AdditionalInfo></InfoMsg></Information></ReorgSpec>
