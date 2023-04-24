@@ -81,7 +81,7 @@ lng_prop_i(1,'LangTimeFormat','24',v).
 lng_prop_i(1,'LangDecimalPoint',',',v).
 lng_prop_i(1,'FullyQualifiedName','Portuguese',d).
  
-ver_stamp('20230422.002956').
+ver_stamp('20230424.194906').
  
-ver_stamp(date(2023,4,21),time(22,2,25,47)).
+ver_stamp(date(2023,4,24),time(16,49,25,66)).
  

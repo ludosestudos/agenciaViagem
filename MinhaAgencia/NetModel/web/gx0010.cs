@@ -243,7 +243,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 214480), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 214480), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20234212275430", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202342416522724", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1446,7 +1446,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20234212275476", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20234241652287", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1462,7 +1462,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("gx0010.js", "?20234212275476", false, true);
+         context.AddJavascriptSource("gx0010.js", "?20234241652287", false, true);
          /* End function include_jscripts */
       }
 
@@ -1567,7 +1567,7 @@ namespace GeneXus.Programs {
             }
             /* Single line edit */
             ROClassString = "Attribute";
-            Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtClienteId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A1ClienteId), 4, 0, ",", "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A1ClienteId), "ZZZ9")),(string)" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtClienteId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)64,(short)1,(short)-1,(short)0,(bool)true,(string)"",(string)"right",(bool)false,(string)""});
+            Grid1Row.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtClienteId_Internalname,StringUtil.LTrim( StringUtil.NToC( (decimal)(A1ClienteId), 4, 0, ",", "")),StringUtil.LTrim( context.localUtil.Format( (decimal)(A1ClienteId), "ZZZ9")),(string)" inputmode=\"numeric\" pattern=\"[0-9]*\""+"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtClienteId_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"1",(short)0,(string)"px",(short)17,(string)"px",(short)4,(short)0,(short)0,(short)64,(short)1,(short)-1,(short)0,(bool)true,(string)"Id",(string)"right",(bool)false,(string)""});
             /* Subfile cell */
             if ( Grid1Container.GetWrapped() == 1 )
             {

@@ -6,18 +6,43 @@
 <TableName>Cliente</TableName>
 <Description>Cliente</Description></Table>
 <ReorgCls>c</ReorgCls>
-<ReorgCode>new</ReorgCode>
-<ReorgMsg>Cliente is new</ReorgMsg>
-<ReorgAction>*</ReorgAction>
+<ReorgCode>pk</ReorgCode>
+<ReorgMsg>Cliente needs conversion</ReorgMsg>
+<ReorgAction>#</ReorgAction>
 <TableAttributes>
 <AttrisInTable>
 <Attribute>
 <AttriId>1</AttriId>
 <AttriName>ClienteId</AttriName>
 <Description>Cliente Id</Description>
-<TakesValueFrom></TakesValueFrom>
+<TakesValueFrom>
+<Table>
+<TableId>1</TableId>
+<TableName>Cliente</TableName>
+<Description>Cliente</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>ClienteId</AttriName>
+<Description>Cliente Id</Description></Attribute></FromValue></TakesValueFrom>
 <OnPrimaryKey>Yes</OnPrimaryKey>
 <AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>Yes</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType>
+<AttriOldType>
 <DataType>N</DataType>
 <Presicion>4</Presicion>
 <Scale>0</Scale>
@@ -30,12 +55,24 @@
 <Value>No</Value></Property>
 <Property>
 <Name>AllowNulls</Name>
-<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Value>No</Value></Property></Properties></AttriOldType>
+<AttriChangeType>upd</AttriChangeType></Attribute>
 <Attribute>
 <AttriId>2</AttriId>
 <AttriName>ClienteNome</AttriName>
 <Description>Cliente Nome</Description>
-<TakesValueFrom></TakesValueFrom>
+<TakesValueFrom>
+<Table>
+<TableId>1</TableId>
+<TableName>Cliente</TableName>
+<Description>Cliente</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>2</AttriId>
+<AttriName>ClienteNome</AttriName>
+<Description>Cliente Nome</Description></Attribute></FromValue></TakesValueFrom>
 <AttriType>
 <DataType>C</DataType>
 <Presicion>20</Presicion>
@@ -57,7 +94,18 @@
 <AttriId>3</AttriId>
 <AttriName>ClienteSobreNome</AttriName>
 <Description>Cliente Sobre Nome</Description>
-<TakesValueFrom></TakesValueFrom>
+<TakesValueFrom>
+<Table>
+<TableId>1</TableId>
+<TableName>Cliente</TableName>
+<Description>Cliente</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>ClienteSobreNome</AttriName>
+<Description>Cliente Sobre Nome</Description></Attribute></FromValue></TakesValueFrom>
 <AttriType>
 <DataType>C</DataType>
 <Presicion>30</Presicion>
@@ -79,7 +127,18 @@
 <AttriId>4</AttriId>
 <AttriName>ClienteEndereco</AttriName>
 <Description>Cliente Endereco</Description>
-<TakesValueFrom></TakesValueFrom>
+<TakesValueFrom>
+<Table>
+<TableId>1</TableId>
+<TableName>Cliente</TableName>
+<Description>Cliente</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>ClienteEndereco</AttriName>
+<Description>Cliente Endereco</Description></Attribute></FromValue></TakesValueFrom>
 <AttriType>
 <DataType>V</DataType>
 <Presicion>1024</Presicion>
@@ -101,7 +160,18 @@
 <AttriId>5</AttriId>
 <AttriName>ClienteTelefone</AttriName>
 <Description>Cliente Telefone</Description>
-<TakesValueFrom></TakesValueFrom>
+<TakesValueFrom>
+<Table>
+<TableId>1</TableId>
+<TableName>Cliente</TableName>
+<Description>Cliente</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>5</AttriId>
+<AttriName>ClienteTelefone</AttriName>
+<Description>Cliente Telefone</Description></Attribute></FromValue></TakesValueFrom>
 <AttriType>
 <DataType>C</DataType>
 <Presicion>20</Presicion>
@@ -123,7 +193,18 @@
 <AttriId>6</AttriId>
 <AttriName>ClienteEmail</AttriName>
 <Description>Cliente Email</Description>
-<TakesValueFrom></TakesValueFrom>
+<TakesValueFrom>
+<Table>
+<TableId>1</TableId>
+<TableName>Cliente</TableName>
+<Description>Cliente</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Sp></Sp>
+<Attribute>
+<AttriId>6</AttriId>
+<AttriName>ClienteEmail</AttriName>
+<Description>Cliente Email</Description></Attribute></FromValue></TakesValueFrom>
 <AttriType>
 <DataType>V</DataType>
 <Presicion>100</Presicion>
@@ -143,6 +224,19 @@
 <Value>Yes</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
 <AttrisNoLongerInTable></AttrisNoLongerInTable>
 <AttrisInManyTables></AttrisInManyTables></TableAttributes>
+<NavigationTree>
+<Table>
+<TableId>1</TableId>
+<TableName>Cliente</TableName>
+<Description>Cliente</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>ClienteId</AttriName>
+<Description>Cliente Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
 <TableIndices>
 <Indices>
 <Index>
@@ -157,7 +251,13 @@
 <Clustered>Yes</Clustered></Index></Indices></TableIndices>
 <FKConstraints></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Cliente] ([ClienteId] smallint NOT NULL , [ClienteNome] nchar(20) NOT NULL , [ClienteSobreNome] nchar(30) NOT NULL , [ClienteEndereco] nvarchar(1024) NOT NULL , [ClienteTelefone] nchar(20) NOT NULL , [ClienteEmail] nvarchar(100) NOT NULL , PRIMARY KEY([ClienteId])) </Statement></Statements>
+<Statement>CREATE TABLE [GXA0001] ([ClienteId] smallint NOT NULL IDENTITY(1,1), [ClienteNome] nchar(20) NOT NULL , [ClienteSobreNome] nchar(30) NOT NULL , [ClienteEndereco] nvarchar(1024) NOT NULL , [ClienteTelefone] nchar(20) NOT NULL , [ClienteEmail] nvarchar(100) NOT NULL ) </Statement>
+<Statement>SET IDENTITY_INSERT [GXA0001] ON</Statement>
+<Statement>INSERT INTO [GXA0001] ([ClienteId], [ClienteNome], [ClienteSobreNome], [ClienteEndereco], [ClienteTelefone], [ClienteEmail]) SELECT [ClienteId], [ClienteNome], [ClienteSobreNome], [ClienteEndereco], [ClienteTelefone], [ClienteEmail] FROM [Cliente] T1</Statement>
+<Statement>SET IDENTITY_INSERT [GXA0001] OFF</Statement>
+<Statement>DROP TABLE [Cliente]</Statement>
+<Statement>CALL sp_rename('[GXA0001]', 'Cliente')</Statement>
+<Statement>ALTER TABLE [Cliente] ADD PRIMARY KEY([ClienteId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>
 <Errors></Errors></ReorgSpec>

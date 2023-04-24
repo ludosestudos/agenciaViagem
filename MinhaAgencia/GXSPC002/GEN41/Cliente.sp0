@@ -190,7 +190,7 @@ index_i(1,[ 'ICLIENTE',u,[ 1 ],'ICliente' ]).
  
  
  
-upd_i(1,1,i,[ [ 1,2,3,4,5,6 ],[],'ICLIENTE',[ [ [],1,1 ] ] ]).
+upd_i(1,1,i,[ [ 2,3,4,5,6 ],[],'ICLIENTE',[ [ [],1,1 ] ] ]).
 upd_i(1,1,u,[ [ 2,3,4,5,6 ],[],'ICLIENTE',[] ]).
 upd_i(1,1,d,[ [],[],'ICLIENTE',[] ]).
  
@@ -205,6 +205,7 @@ upd_i(1,1,d,[ [],[],'ICLIENTE',[] ]).
  
  
  
+dom_info_i(88,[ 'Id' ]).
 dom_info_i(86,[ 'Nome' ]).
 dom_info_i(87,[ 'SobreNome' ]).
 dom_info_i(43,[ 'GeneXus\Address' ]).
@@ -1141,8 +1142,11 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
 att_prop_i(2,1,'ExternalName','ClienteId',d).
 att_prop_i(2,1,'ExternalNamespace','MinhaAgencia',d).
 att_prop_i(2,1,'EmptyAsNull','Yes',d).
-att_prop_i(2,1,idBasedOn,'',d).
-att_prop_i(2,1,'AUTONUMBER','0',d).
+att_prop_i(2,1,idBasedOn,88,v).
+att_prop_i(2,1,'AUTONUMBER','-1',d).
+att_prop_i(2,1,'AUTONUMBER_START','1',d).
+att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
 att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
@@ -1208,6 +1212,7 @@ att_prop_i(2,6,'FullName','ClienteEmail',v).
  
 tbl_att_prop_i(2,1,6,'AllowNulls',n).
 tbl_att_prop_i(2,1,1,'AllowNulls',n).
+tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
 tbl_att_prop_i(2,1,2,'AllowNulls',n).
 tbl_att_prop_i(2,1,3,'AllowNulls',n).
 tbl_att_prop_i(2,1,4,'AllowNulls',n).
@@ -1226,9 +1231,10 @@ trn_level_i(1,[ [ 1,2,3,4,5,6 ],'Cliente','Cliente','Cliente','',2 ]).
  
  
  
-pgm_parm_i(web,0,'GX0010',[ [ int,4,0,0 ] ],[ [ 'V1',out,[] ] ]).
+pgm_parm_i(web,7,'GX0010',[ [ int,4,0,0 ] ],[ [ pClienteId,out,[] ] ]).
  
 pgm_callprotocol_i(trn,1,'CLIENTE','INTERNAL','Unsecure').
+pgm_callprotocol_i(web,7,'GX0010','INTERNAL','Unsecure').
  
  
  

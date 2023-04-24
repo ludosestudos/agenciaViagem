@@ -25,7 +25,7 @@
       <add  key="DateFormat" value="DMY"/>
       <add  key="YearLimit" value="1940"/>
       <add  key="TimeAmPmFormat" value="24"/>
-      <add  key="VER_STAMP" value="20230422.002956"/>
+      <add  key="VER_STAMP" value="20230424.194906"/>
       <add  key="CS_BLOB_PATH" value="PublicTempStorage"/>
       <add  key="TMPMEDIA_DIR" value="PrivateTempStorage"/>
       <add  key="PRINT_LAYOUT_METADATA_DIR" value="LayoutMetadata"/>
@@ -55,7 +55,7 @@
       <add  key="wcf:serviceHostingEnvironment:useClassicReadEntityBodyMode" value="true"/>
       <add  key="HTTP_PROTOCOL" value="Unsecure"/>
       <add  key="SAMESITE_COOKIE" value="Lax"/>
-      <add  key="CACHE_INVALIDATION_TOKEN" value="20234212275558"/>
+      <add  key="CACHE_INVALIDATION_TOKEN" value="202342416522871"/>
    </appSettings>
    <languages >
       <Portuguese  code="por" time_fmt="24" decimal_point="," thousand_sep="." date_fmt="DMY" culture="pt-BR"/>

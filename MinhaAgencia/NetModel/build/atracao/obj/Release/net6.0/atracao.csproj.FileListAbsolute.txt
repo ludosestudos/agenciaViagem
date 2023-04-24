@@ -1,0 +1,10 @@
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\atracao.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\web\bin\atracao.pdb
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\atracao\obj\Release\net6.0\atracao.csproj.AssemblyReference.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\atracao\obj\Release\net6.0\atracao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\atracao\obj\Release\net6.0\atracao.csproj.CoreCompileInputs.cache
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\atracao\obj\Release\net6.0\atracao.csproj.CopyComplete
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\atracao\obj\Release\net6.0\atracao.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\atracao\obj\Release\net6.0\refint\atracao.dll
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\atracao\obj\Release\net6.0\atracao.pdb
+C:\Users\genexus\OneDrive - FAT - Fundação de Apoio a Tecnologia\Documents\Genexus\agencia\agenciaViagem\MinhaAgencia\NetModel\build\atracao\obj\Release\net6.0\ref\atracao.dll

@@ -2131,6 +2131,31 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "atracao/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "GeneXus.Programs.Common": "1.0.0",
+          "Microsoft.Data.SqlClient": "1.0.19269.1",
+          "Microsoft.Extensions.DependencyModel": "3.0.0",
+          "NetTopologySuite": "2.0.0",
+          "NetTopologySuite.Core": "1.15.3",
+          "Novell.Directory.Ldap.NETStandard": "3.3.1",
+          "Sandwych.GeographicLib": "1.49.3",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.DirectoryServices": "4.7.0",
+          "iTextSharp-LGPL": "4.1.6"
+        },
+        "compile": {
+          "bin/placeholder/atracao.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/atracao.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "cliente/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -2200,6 +2225,31 @@
         },
         "runtime": {
           "bin/placeholder/gx0010.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "gx0020/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "GeneXus.Programs.Common": "1.0.0",
+          "Microsoft.Data.SqlClient": "1.0.19269.1",
+          "Microsoft.Extensions.DependencyModel": "3.0.0",
+          "NetTopologySuite": "2.0.0",
+          "NetTopologySuite.Core": "1.15.3",
+          "Novell.Directory.Ldap.NETStandard": "3.3.1",
+          "Sandwych.GeographicLib": "1.49.3",
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.DirectoryServices": "4.7.0",
+          "iTextSharp-LGPL": "4.1.6"
+        },
+        "compile": {
+          "bin/placeholder/gx0020.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/gx0020.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -7177,6 +7227,11 @@
       "path": "../appmasterpage/appmasterpage.csproj",
       "msbuildProject": "../appmasterpage/appmasterpage.csproj"
     },
+    "atracao/1.0.0": {
+      "type": "project",
+      "path": "../atracao/atracao.csproj",
+      "msbuildProject": "../atracao/atracao.csproj"
+    },
     "cliente/1.0.0": {
       "type": "project",
       "path": "../cliente/cliente.csproj",
@@ -7191,6 +7246,11 @@
       "type": "project",
       "path": "../gx0010/gx0010.csproj",
       "msbuildProject": "../gx0010/gx0010.csproj"
+    },
+    "gx0020/1.0.0": {
+      "type": "project",
+      "path": "../gx0020/gx0020.csproj",
+      "msbuildProject": "../gx0020/gx0020.csproj"
     },
     "promptmasterpage/1.0.0": {
       "type": "project",
@@ -7230,8 +7290,10 @@
       "System.Configuration.ConfigurationManager >= 4.5.0",
       "System.DirectoryServices >= 4.7.0",
       "appmasterpage >= 1.0.0",
+      "atracao >= 1.0.0",
       "cliente >= 1.0.0",
       "gx0010 >= 1.0.0",
+      "gx0020 >= 1.0.0",
       "iTextSharp-LGPL >= 4.1.6",
       "promptmasterpage >= 1.0.0",
       "recentlinks >= 1.0.0",
@@ -7271,11 +7333,17 @@
             "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\appmasterpage\\appmasterpage.csproj": {
               "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\appmasterpage\\appmasterpage.csproj"
             },
+            "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\atracao\\atracao.csproj": {
+              "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\atracao\\atracao.csproj"
+            },
             "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\cliente\\cliente.csproj": {
               "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\cliente\\cliente.csproj"
             },
             "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0010\\gx0010.csproj": {
               "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0010\\gx0010.csproj"
+            },
+            "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0020\\gx0020.csproj": {
+              "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\gx0020\\gx0020.csproj"
             },
             "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\promptmasterpage\\promptmasterpage.csproj": {
               "projectPath": "C:\\Users\\genexus\\OneDrive - FAT - Fundação de Apoio a Tecnologia\\Documents\\Genexus\\agencia\\agenciaViagem\\MinhaAgencia\\NetModel\\build\\promptmasterpage\\promptmasterpage.csproj"

@@ -324,7 +324,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 34,'',false,'',0)\"";
-         GxWebStd.gx_single_line_edit( context, edtClienteId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A1ClienteId), 4, 0, ",", "")), StringUtil.LTrim( ((edtClienteId_Enabled!=0) ? context.localUtil.Format( (decimal)(A1ClienteId), "ZZZ9") : context.localUtil.Format( (decimal)(A1ClienteId), "ZZZ9"))), " inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtClienteId_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtClienteId_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_Cliente.htm");
+         GxWebStd.gx_single_line_edit( context, edtClienteId_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A1ClienteId), 4, 0, ",", "")), StringUtil.LTrim( ((edtClienteId_Enabled!=0) ? context.localUtil.Format( (decimal)(A1ClienteId), "ZZZ9") : context.localUtil.Format( (decimal)(A1ClienteId), "ZZZ9"))), " inputmode=\"numeric\" pattern=\"[0-9]*\""+TempTags+" onchange=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,'.');"+";gx.evt.onblur(this,34);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtClienteId_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtClienteId_Enabled, 0, "text", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "Id", "right", false, "", "HLP_Cliente.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -1249,14 +1249,11 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T00018 */
-                     pr_default.execute(6, new Object[] {A1ClienteId, A2ClienteNome, A3ClienteSobreNome, A4ClienteEndereco, A5ClienteTelefone, A6ClienteEmail});
+                     pr_default.execute(6, new Object[] {A2ClienteNome, A3ClienteSobreNome, A4ClienteEndereco, A5ClienteTelefone, A6ClienteEmail});
+                     A1ClienteId = T00018_A1ClienteId[0];
+                     AssignAttri("", false, "A1ClienteId", StringUtil.LTrimStr( (decimal)(A1ClienteId), 4, 0));
                      pr_default.close(6);
                      dsDefault.SmartCacheProvider.SetUpdated("Cliente");
-                     if ( (pr_default.getStatus(6) == 1) )
-                     {
-                        GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
-                        AnyError = 1;
-                     }
                      if ( AnyError == 0 )
                      {
                         /* Start of After( Insert) rules */
@@ -1567,7 +1564,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 214480), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 214480), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20234212275393", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202342416522662", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1731,7 +1728,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20234212275396", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202342416522667", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1747,7 +1744,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("cliente.js", "?20234212275396", false, true);
+         context.AddJavascriptSource("cliente.js", "?202342416522668", false, true);
          /* End function include_jscripts */
       }
 
@@ -1979,6 +1976,7 @@ namespace GeneXus.Programs {
          T00012_A4ClienteEndereco = new string[] {""} ;
          T00012_A5ClienteTelefone = new string[] {""} ;
          T00012_A6ClienteEmail = new string[] {""} ;
+         T00018_A1ClienteId = new short[1] ;
          T000111_A1ClienteId = new short[1] ;
          sDynURL = "";
          FormProcess = "";
@@ -2009,6 +2007,7 @@ namespace GeneXus.Programs {
                T00017_A1ClienteId
                }
                , new Object[] {
+               T00018_A1ClienteId
                }
                , new Object[] {
                }
@@ -2151,6 +2150,7 @@ namespace GeneXus.Programs {
       private string[] T00012_A4ClienteEndereco ;
       private string[] T00012_A5ClienteTelefone ;
       private string[] T00012_A6ClienteEmail ;
+      private short[] T00018_A1ClienteId ;
       private short[] T000111_A1ClienteId ;
       private GXWebForm Form ;
    }
@@ -2167,7 +2167,7 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[3])
          ,new ForEachCursor(def[4])
          ,new ForEachCursor(def[5])
-         ,new UpdateCursor(def[6])
+         ,new ForEachCursor(def[6])
          ,new UpdateCursor(def[7])
          ,new UpdateCursor(def[8])
          ,new ForEachCursor(def[9])
@@ -2205,7 +2205,6 @@ namespace GeneXus.Programs {
           };
           Object[] prmT00018;
           prmT00018 = new Object[] {
-          new ParDef("@ClienteId",GXType.Int16,4,0) ,
           new ParDef("@ClienteNome",GXType.NChar,20,0) ,
           new ParDef("@ClienteSobreNome",GXType.NChar,30,0) ,
           new ParDef("@ClienteEndereco",GXType.NVarChar,1024,0) ,
@@ -2235,7 +2234,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("T00015", "SELECT [ClienteId] FROM [Cliente] WHERE [ClienteId] = @ClienteId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00015,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("T00016", "SELECT TOP 1 [ClienteId] FROM [Cliente] WHERE ( [ClienteId] > @ClienteId) ORDER BY [ClienteId]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00016,1, GxCacheFrequency.OFF ,true,true )
              ,new CursorDef("T00017", "SELECT TOP 1 [ClienteId] FROM [Cliente] WHERE ( [ClienteId] < @ClienteId) ORDER BY [ClienteId] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00017,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T00018", "INSERT INTO [Cliente]([ClienteId], [ClienteNome], [ClienteSobreNome], [ClienteEndereco], [ClienteTelefone], [ClienteEmail]) VALUES(@ClienteId, @ClienteNome, @ClienteSobreNome, @ClienteEndereco, @ClienteTelefone, @ClienteEmail)", GxErrorMask.GX_NOMASK,prmT00018)
+             ,new CursorDef("T00018", "INSERT INTO [Cliente]([ClienteNome], [ClienteSobreNome], [ClienteEndereco], [ClienteTelefone], [ClienteEmail]) VALUES(@ClienteNome, @ClienteSobreNome, @ClienteEndereco, @ClienteTelefone, @ClienteEmail); SELECT SCOPE_IDENTITY()", GxErrorMask.GX_NOMASK,prmT00018)
              ,new CursorDef("T00019", "UPDATE [Cliente] SET [ClienteNome]=@ClienteNome, [ClienteSobreNome]=@ClienteSobreNome, [ClienteEndereco]=@ClienteEndereco, [ClienteTelefone]=@ClienteTelefone, [ClienteEmail]=@ClienteEmail  WHERE [ClienteId] = @ClienteId", GxErrorMask.GX_NOMASK,prmT00019)
              ,new CursorDef("T000110", "DELETE FROM [Cliente]  WHERE [ClienteId] = @ClienteId", GxErrorMask.GX_NOMASK,prmT000110)
              ,new CursorDef("T000111", "SELECT [ClienteId] FROM [Cliente] ORDER BY [ClienteId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,100, GxCacheFrequency.OFF ,true,false )
@@ -2280,6 +2279,9 @@ namespace GeneXus.Programs {
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
              case 5 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                return;
+             case 6 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 return;
              case 9 :

@@ -1,0 +1,297 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="file:///C:/Program Files (x86)/GeneXus/GeneXus17/gxxml/genexus.css">
+<title>GeneXus Navigation Report</title></head><body><script type="text/javascript">
+			var sGXPath = "file:///C:/Program Files (x86)/GeneXus/GeneXus17/";
+	var sGXImagesPath = "file:///C:/Program Files (x86)/GeneXus/GeneXus17/gxxml/images/";
+
+	function displayNugget()
+	{
+		try
+		{
+			var currel = window.event.srcElement;
+			oNug = currel.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+			var e = currel.parentElement;
+			var f = oNug.children[1];
+			
+			ContentRegKey = "DD_CONTENT_" + document.title + "_" + oNug.id;
+
+			if (f.length != null)
+			{
+				if (f[0].style.display == "none")
+				{
+					e[0].title = "Hide";
+					e[0].children[0].src = sGXImagesPath + "ReportView_CollapseSection.gif";
+					f[0].style.display = "block";
+				}
+				else
+				{
+					e[0].title = "Show";
+					e[0].children[0].src = sGXImagesPath + "ReportView_ExpandSection.gif";
+					f[0].style.display = "none";
+				}
+			}
+			else
+			{
+				//  If contents are hidden, show them
+				if (f.style.display == "none")
+				{
+					e.title = "Hide";
+					e.children[0].src = sGXImagesPath + "ReportView_CollapseSection.gif";
+					f.style.display = "block";
+					display = "0";
+					// if the page is not runin the correct security context then
+					try { window.external.SetPref(ContentRegKey,"display");}
+					catch (exception) {}
+
+				}
+				//  If contents are showing, hide them
+				else
+				{
+					e.title = "Show";
+					e.children[0].src = sGXImagesPath + "ReportView_ExpandSection.gif";
+					f.style.display = "none";
+					display = "1";
+					try { window.external.SetPref(ContentRegKey,"hide");}
+					catch (exception) {}
+				}
+			}
+		}
+		catch (exception)
+		{
+		}
+	}
+
+	function gxopen(nCls,nId)
+	{
+		try
+		{
+			if (nCls == 12) // Prompt
+				nCls = 4;     // Work Panel
+			else if (nCls == -5) // Formula
+				nCls = 5;          // Attribute
+			window.external.gxopen(nCls,nId);
+		}
+		catch (exception)
+		{
+		}
+	}
+
+	function gxopenpart(nCls,nId,sPart,sLocation)
+	{
+		try
+		{
+			window.external.gxopenpart(nCls,nId,sPart,sLocation);
+		}
+		catch (exception)
+		{
+		}
+	}
+
+	function gxcontextmenu(nCls,nId)
+	{
+		try
+		{
+			var el=window.event;
+			if (nCls == 12) // Prompt
+				nCls = 4;     // Work Panel
+			else if (nCls == 11) // Domain
+				nCls = 5;          // Attribute
+			else if (nCls == -5) // Formula
+				nCls = 5;          // Attribute
+			window.external.gxcontextmenu(nCls,nId,el.screenX,el.screenY);
+		}
+		catch (exception)
+		{
+		}
+		window.event.returnValue=false;
+	}
+
+	function gxopenhelp(sHelpStr)
+	{
+		try
+		{
+			window.external.gxopenhelp(sHelpStr);
+		}
+		catch (exception)
+		{
+		}
+		window.event.returnValue=false;
+		}
+		</script><table class="LayoutNoBorder">
+    <tbody>
+      <tr>
+        <td>
+          <div id="ReorgSpec" xmlns:gxsql="urn:SQLFunc">
+            <div>
+              <table class="MainHeaderTable">
+                <tbody>
+                  <tr>
+                    <td class="MainHeaderTitle" title="Table Atracao specification">Table Atracao specification</td>
+                    <td title="Hide" onclick="displayNugget()" style="text-align:right"><img style="cursor:pointer;width:13px;height:13px" alt="Collapse or expand section" src="file:///C:/Program Files (x86)/GeneXus/GeneXus17/gxxml/images/ReportView_CollapseSection.gif"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <table class="MainContentTable">
+                <tbody>
+                  <tr>
+                    <td colspan="2" style="border:1px solid #6C6C6C;padding:10px"><span class="LabelText">Table name: </span><span class="gxobj" onclick="gxopen(7,2)" oncontextmenu="gxcontextmenu(7,2)">Atracao</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="padding:5px 10px" class="MessageText">Atracao is new</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div>
+                        <table class="HeaderTable" style="width:100%">
+                          <tbody>
+                            <tr>
+                              <td style="width:100%" title="Table Structure" class="HeaderTable">Table Structure</td>
+                              <td title="Hide" onclick="displayNugget()" style="text-align:right"><img style="cursor:pointer;width:13px;height:13px" alt="Collapse or expand section" src="file:///C:/Program Files (x86)/GeneXus/GeneXus17/gxxml/images/ReportView_CollapseSection.gif"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="gxcontent">
+                        <table class="gxcontent" style="width:100%">
+                          <thead>
+                            <tr class="subTitulosTabla">
+                              <th style="white-space: nowrap;width:1%"></th>
+                              <th style="white-space: nowrap;width:1%"></th>
+                              <th style="white-space: nowrap">Attribute</th>
+                              <th style="white-space: nowrap">Definition</th>
+                              <th style="white-space: nowrap">Previous values</th>
+                              <th style="white-space: nowrap">Takes value from</th>
+                              <th style="white-space: nowrap"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              </tr><tr>
+                                <td style="vertical-align:top"></td>
+                                <td style="vertical-align:top"><img style="vertical-align:bottom;margin: 0px auto" alt="Key" src="file:///C:/Program Files (x86)/GeneXus/GeneXus17/gxxml/images/TableAttributeKey.ico"></td>
+                                <td style="vertical-align:top;white-space: nowrap"><span title="AtracaoId : Atracao Id" class="gxobj" onclick="gxopen(5,7)" oncontextmenu="gxcontextmenu(5,7)">AtracaoId</span></td>
+                                <td style="vertical-align:top">Numeric (4), Not null, Autonumber</td>
+                                <td style="vertical-align:top">
+                                  <table style="width:100%;border-collapse:collapse">
+                                    <tbody></tbody>
+                                  </table>
+                                </td>
+                                <td style="vertical-align:top"></td>
+                              </tr>
+                              <tr>
+                                <td style="vertical-align:top"></td>
+                                <td style="vertical-align:top"></td>
+                                <td style="vertical-align:top;white-space: nowrap"><span title="AtracaoNome : Atracao Nome" class="gxobj" onclick="gxopen(5,8)" oncontextmenu="gxcontextmenu(5,8)">AtracaoNome</span></td>
+                                <td style="vertical-align:top">Character (20), Not null, NLS</td>
+                                <td style="vertical-align:top">
+                                  <table style="width:100%;border-collapse:collapse">
+                                    <tbody></tbody>
+                                  </table>
+                                </td>
+                                <td style="vertical-align:top"></td>
+                              </tr>
+                            
+                            <tr></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div>
+                        <table class="HeaderTable" style="width:100%">
+                          <tbody>
+                            <tr>
+                              <td style="width:100%" title="Indexes" class="HeaderTable">Indexes</td>
+                              <td title="Hide" onclick="displayNugget()" style="text-align:right"><img style="cursor:pointer;width:13px;height:13px" alt="Collapse or expand section" src="file:///C:/Program Files (x86)/GeneXus/GeneXus17/gxxml/images/ReportView_CollapseSection.gif"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="gxcontent">
+                        <table class="gxcontent" style="width:100%">
+                          <thead>
+                            <tr class="subTitulosTabla">
+                              <th style="white-space: nowrap;width:1%"></th>
+                              <th style="white-space: nowrap;width:1%"></th>
+                              <th style="white-space: nowrap">Name</th>
+                              <th style="white-space: nowrap">Definition</th>
+                              <th style="white-space: nowrap">Composition</th>
+                              <th style="white-space: nowrap"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              </tr><tr>
+                                <td style="vertical-align:top"></td>
+                                <td></td>
+                                <td style="vertical-align:top">IATRACAO</td>
+                                <td style="vertical-align:top">primary key Clustered</td>
+                                <td style="vertical-align:top">
+                                  <table style="border-collapse:collapse;border-spacing:0">
+                                    <tbody>
+                                      <tr class="text">
+                                        <td><img style="vertical-align:bottom;margin: 0px auto" alt="IdxAscending" src="file:///C:/Program Files (x86)/GeneXus/GeneXus17/gxxml/images/ReportView_AscendingIndex.gif"></td>
+                                        <td><span title="AtracaoId : Atracao Id" class="gxobj" onclick="gxopen(5,7)" oncontextmenu="gxcontextmenu(5,7)">AtracaoId</span>
+ 
+</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <td></td>
+                              </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div>
+                        <table class="HeaderTable" style="width:100%">
+                          <tbody>
+                            <tr>
+                              <td style="width:100%" title="Statements" class="HeaderTable">Statements</td>
+                              <td title="Hide" onclick="displayNugget()" style="text-align:right"><img style="cursor:pointer;width:13px;height:13px" alt="Collapse or expand section" src="file:///C:/Program Files (x86)/GeneXus/GeneXus17/gxxml/images/ReportView_CollapseSection.gif"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="gxcontent">
+                        <table class="gxcontent" style="width:100%">
+                          <tbody>
+                            <tr>
+                              <td style="vertical-align:top">
+                                <pre style="white-space: normal"><code><span style="font-family: Courier New; font-size: 10pt;">
+<span style="color: blue; ">CREATE</span>&nbsp;<span style="color: blue; ">TABLE</span>&nbsp;<span style="color: maroon; ">[Atracao]</span>&nbsp;<span style="color: maroon; ">(</span>
+<br>&nbsp;&nbsp;<span style="color: maroon; ">[AtracaoId]</span>&nbsp;&nbsp;&nbsp;<span style="color: black; font-style: italic; ">SMALLINT</span>&nbsp;&nbsp;&nbsp;  <span style="color: blue; ">NOT</span>&nbsp;<span style="color: blue; ">NULL</span>&nbsp;&nbsp;&nbsp;  <span style="color: blue; ">IDENTITY</span>&nbsp;<span style="color: maroon; ">(</span>&nbsp;<span style="color: black; ">1</span>&nbsp;<span style="color: silver; ">,</span>&nbsp;<span style="color: black; ">1</span>&nbsp;<span style="color: maroon; ">)</span><span style="color: silver; ">,</span>
+<br>&nbsp;&nbsp;<span style="color: maroon; ">[AtracaoNome]</span>&nbsp;<span style="color: black; font-style: italic; ">NCHAR</span><span style="color: maroon; ">(</span><span style="color: black; ">20</span><span style="color: maroon; ">)</span>&nbsp;&nbsp;&nbsp;  <span style="color: blue; ">NOT</span>&nbsp;<span style="color: blue; ">NULL</span><span style="color: silver; ">,</span>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;  <span style="color: blue; ">PRIMARY</span>&nbsp;<span style="color: blue; ">KEY</span>&nbsp;<span style="color: maroon; ">(</span>&nbsp;<span style="color: maroon; ">[AtracaoId]</span>&nbsp;<span style="color: maroon; ">)</span><span style="color: maroon; ">)</span>
+</span></code></pre>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body></html>

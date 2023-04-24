@@ -9,4 +9,10 @@
       <ObjDesc>Cliente</ObjDesc>
       <ObjLink>cliente.aspx</ObjLink>
    </Object>
+   <Object>
+      <ObjCls>0</ObjCls>
+      <ObjName>Atracao</ObjName>
+      <ObjDesc>Atracao</ObjDesc>
+      <ObjLink>atracao.aspx</ObjLink>
+   </Object>
 </Objects>
